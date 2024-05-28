@@ -15,7 +15,7 @@ class PracticePage extends StatelessWidget {
         child: ListView(
           children: [
             Card(
-              color: Colors.white,
+              color: const Color.fromARGB(255, 0, 0, 0),
               elevation: 5,
               child: Column(
                 children: [
