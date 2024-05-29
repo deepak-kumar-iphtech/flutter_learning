@@ -6,5 +6,7 @@ class MyRoutes {
   static String buttonRoute = "/button";
   static String responsiveRoute = "/responsive";
   static String alertRoute = "/alert";
+  static String cardRoute = "/card";
   static String practiceRoute = "/practice";
+  static String viewRoute = "/views";
 }

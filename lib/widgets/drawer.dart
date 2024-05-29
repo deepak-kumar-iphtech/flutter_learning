@@ -40,7 +40,7 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             title: const Text("Container"),
-            leading: const Icon(Icons.add_box),
+            leading: const Icon(CupertinoIcons.square),
             onTap: () => Navigator.pushNamed(context, MyRoutes.containerRoute),
           ),
           ListTile(
@@ -57,6 +57,16 @@ class MyDrawer extends StatelessWidget {
             title: const Text("Alert Widgets"),
             leading: const Icon(Icons.dangerous_outlined),
             onTap: () => Navigator.pushNamed(context, MyRoutes.alertRoute),
+          ),
+          ListTile(
+            title: const Text("Card Widgets"),
+            leading: const Icon(Icons.credit_card),
+            onTap: () => Navigator.pushNamed(context, MyRoutes.cardRoute),
+          ),
+          ListTile(
+            title: const Text("List&Grid View"),
+            leading: const Icon(Icons.grid_view_sharp),
+            onTap: () => Navigator.pushNamed(context, MyRoutes.viewRoute),
           ),
           ListTile(
             title: const Text("Practice"),

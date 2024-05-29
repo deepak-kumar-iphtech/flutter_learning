@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PracticePage extends StatelessWidget {
-  const PracticePage({
+class ListGridView extends StatelessWidget {
+  const ListGridView({
     super.key,
   });
 
@@ -10,7 +9,7 @@ class PracticePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Cards"),
+          title: const Text("Views"),
         ),
         body: Column(
           children: [

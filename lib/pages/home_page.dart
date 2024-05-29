@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:my_first_app/pages/drawer.dart';
+import 'package:my_first_app/widgets/drawer.dart';
 import 'package:my_first_app/utils/routes.dart';
 
 class HomePage extends StatelessWidget {
