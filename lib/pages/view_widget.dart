@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ListGridView extends StatelessWidget {
+class ListGridView extends StatefulWidget {
   const ListGridView({
     super.key,
   });
 
+  @override
+  State<ListGridView> createState() => _ListGridViewState();
+}
+
+class _ListGridViewState extends State<ListGridView> {
+  bool stateChange = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,76 +23,99 @@ class ListGridView extends StatelessWidget {
               "List View",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            Padding(
-              padding: const EdgeInsets.all(32.0),
-              child: SizedBox(
-                height: 200,
-                child: ListView(
-                  children: [
-                    Container(
-                      height: 150,
-                      width: 160,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.blue, width: 3.0),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(2))),
-                      //color: Colors.blue,
-                      child: const Center(
-                        child: Text(
-                          "Box 1",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blue),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 8.0,
-                    ),
-                    Container(
-                      height: 150,
-                      width: 160,
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(color: Colors.deepPurple, width: 3.0),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(2))),
-                      //color: Colors.blue,
-                      child: const Center(
-                        child: Text(
-                          "Box 2",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.deepPurple),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 8.0,
-                    ),
-                    Container(
-                      height: 150,
-                      width: 160,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.green, width: 3.0),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(2))),
-                      //color: Colors.blue,
-                      child: const Center(
-                        child: Text(
-                          "Box 3",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.green),
-                        ),
-                      ),
-                    ),
-                  ],
+            Stack(
+              children: [
+                Positioned(
+                  right: 21,
+                  child: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          stateChange = !stateChange;
+                        });
+                      },
+                      icon: const Icon(
+                        Icons.list,
+                        size: 30,
+                      )),
                 ),
-              ),
+                Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: SizedBox(
+                    height: 200,
+                    child: ListView(
+                      scrollDirection:
+                          stateChange ? Axis.horizontal : Axis.vertical,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Container(
+                            height: 150,
+                            width: 160,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue, width: 3.0),
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(2))),
+                            child: const Center(
+                              child: Text(
+                                "Box 1",
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.blue),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Container(
+                            height: 150,
+                            width: 160,
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: Colors.deepPurple, width: 3.0),
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(2))),
+                            //color: Colors.blue,
+                            child: const Center(
+                              child: Text(
+                                "Box 2",
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.deepPurple),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Container(
+                            height: 150,
+                            width: 160,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.green, width: 3.0),
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(2))),
+                            //color: Colors.blue,
+                            child: const Center(
+                              child: Text(
+                                "Box 3",
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.green),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
             const Text(
               "Grid View",
@@ -95,7 +124,7 @@ class ListGridView extends StatelessWidget {
 
             ///Grid view
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(32.0),
               child: SizedBox(
                 height: 200,
                 child: GridView(
@@ -114,7 +143,7 @@ class ListGridView extends StatelessWidget {
                       //color: Colors.blue,
                       child: const Center(
                         child: Text(
-                          "Box 3",
+                          "Box 1",
                           style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
@@ -132,7 +161,7 @@ class ListGridView extends StatelessWidget {
                       //color: Colors.blue,
                       child: const Center(
                         child: Text(
-                          "Box 3",
+                          "Box 2",
                           style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
@@ -170,7 +199,7 @@ class ListGridView extends StatelessWidget {
                       //color: Colors.blue,
                       child: const Center(
                         child: Text(
-                          "Box 3",
+                          "Box 4",
                           style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
