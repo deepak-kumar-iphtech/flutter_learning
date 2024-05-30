@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/pages/Signup_page.dart';
+import 'package:my_first_app/pages/admin_page.dart';
 import 'package:my_first_app/pages/alert_widget.dart';
 import 'package:my_first_app/pages/button_page.dart';
 import 'package:my_first_app/pages/card_widget.dart';
 import 'package:my_first_app/pages/container_properties.dart';
 import 'package:my_first_app/pages/home_page.dart';
 import 'package:my_first_app/pages/login_page.dart';
+import 'package:my_first_app/pages/other_widgets.dart';
 //import 'package:google_fonts/google_fonts.dart';
 import 'package:my_first_app/pages/practice_page.dart';
 import 'package:my_first_app/pages/responsive_widget.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
       //   primarySwatch: Colors.deepPurple,
       //   fontFamily: GoogleFonts.lato().fontFamily,
       // ),
-      //initialRoute: MyRoutes.practiceRoute,
+      initialRoute: MyRoutes.adminRoute,
       routes: {
         "/": (context) => const HomePage(),
         MyRoutes.homeRoute: (context) => const HomePage(),
@@ -41,6 +43,8 @@ class MyApp extends StatelessWidget {
         MyRoutes.alertRoute: (context) => const AlertWidget(),
         MyRoutes.cardRoute: (context) => const CardWidget(),
         MyRoutes.viewRoute: (context) => const ListGridView(),
+        MyRoutes.otherWidgetsRoute: (context) => const OtherWidgets(),
+        MyRoutes.adminRoute: (context) => const AdminPage(),
         MyRoutes.practiceRoute: (context) => const PracticePage(),
       },
     );

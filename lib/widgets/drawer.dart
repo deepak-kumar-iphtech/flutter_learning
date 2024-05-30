@@ -69,6 +69,12 @@ class MyDrawer extends StatelessWidget {
             onTap: () => Navigator.pushNamed(context, MyRoutes.viewRoute),
           ),
           ListTile(
+            title: const Text("Other Widgets"),
+            leading: const Icon(Icons.devices_other),
+            onTap: () =>
+                Navigator.pushNamed(context, MyRoutes.otherWidgetsRoute),
+          ),
+          ListTile(
             title: const Text("Practice"),
             leading: const Icon(Icons.star),
             onTap: () => Navigator.pushNamed(context, MyRoutes.practiceRoute),
