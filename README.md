@@ -1,4 +1,4 @@
-# my_first_app
+# LearningApp
 
 A new Flutter project.
 
