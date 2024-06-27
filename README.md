@@ -1,4 +1,4 @@
-# my_first_app
+# LearningApp in Flutter
 
 A new Flutter project.
 
@@ -14,3 +14,10 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+✍🏻 Intro:
+
+Introducing our learning app, With Quick Reads, you can swiftly glance through drawer and catch up on top widgets This app offers categorized sections, allowing you to delve into specific topics of interest effortlessly.
+
+🚦 Running the Project
+1. Clone the repository:
+  ```
